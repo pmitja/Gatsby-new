@@ -6,13 +6,17 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^5.10.0",
+    "gatsby-plugin-gatsby-cloud": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-source-filesystem": "^5.10.0",
+    "gatsby-source-storyblok": "^5.0.21",
     "gatsby-transformer-sharp": "^5.10.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "storyblok-js-client": "^5.10.6",
+    "storyblok-react": "^0.1.2"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
@@ -23,7 +27,7 @@
   "license": "0BSD",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md,css}\"",
     "start": "gatsby develop",
     "serve": "gatsby serve",

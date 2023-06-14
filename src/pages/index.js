@@ -6,6 +6,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
+import { useStoryblokState } from "gatsby-source-storyblok"
+import { graphql } from "gatsby"
+
 const links = [
   {
     text: "Tutorial",
@@ -69,8 +72,12 @@ const moreLinks = [
 
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
-const IndexPage = () => (
+const IndexPage = ({data}) => { 
+  let story = data.storyblokEntry
+  story = useStoryblokState(story)
+  return (
   <Layout>
+    <h1>{story.name}</h1>
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
@@ -116,7 +123,7 @@ const IndexPage = () => (
       </React.Fragment>
     ))}
   </Layout>
-)
+)}
 
 /**
  * Head export to define metadata for the page
@@ -126,3 +133,16 @@ const IndexPage = () => (
 export const Head = () => <Seo title="Home" />
 
 export default IndexPage
+
+export const query = graphql`
+  query HomeQuery {
+    storyblokEntry(full_slug: { eq: "home" }) {
+      content
+      name
+      full_slug
+      uuid
+      id
+      internalId
+    }
+  }
+`

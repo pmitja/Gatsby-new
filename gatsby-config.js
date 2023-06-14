@@ -39,5 +39,20 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-gatsby-cloud`,
+      options: {
+        // as your choice
+      },
+    },
+    {
+      resolve: 'gatsby-source-storyblok',
+      options: {
+        accessToken: "0qXQGAIUwWGc9A36FbPqdQtt",
+        version: process.env.NODE_ENV === 'production' ? 'published' : 'draft',
+        localAssets: true, // Optional parameter to download the images to use with Gatsby Image Plugin
+        // languages: ['de', 'at'] // Optional parameter. Omission will retrieve all languages by default.
+      }
+    }
   ],
 }

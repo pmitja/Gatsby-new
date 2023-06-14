@@ -10,6 +10,15 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import { storyblokInit, apiPlugin } from "gatsby-source-storyblok"
+
+storyblokInit({
+  accessToken: "0qXQGAIUwWGc9A36FbPqdQtt",
+  use: [apiPlugin],
+  components: {
+    // components
+  }
+});
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
