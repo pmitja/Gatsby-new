@@ -9,12 +9,14 @@
     "gatsby-plugin-gatsby-cloud": "^5.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-manifest": "^5.10.0",
+    "gatsby-plugin-sass": "^6.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-source-filesystem": "^5.10.0",
     "gatsby-source-storyblok": "^5.0.21",
     "gatsby-transformer-sharp": "^5.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.63.4",
     "storyblok-js-client": "^5.10.6"
   },
   "devDependencies": {

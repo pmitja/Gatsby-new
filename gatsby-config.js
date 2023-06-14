@@ -53,6 +53,7 @@ module.exports = {
         localAssets: true, // Optional parameter to download the images to use with Gatsby Image Plugin
         // languages: ['de', 'at'] // Optional parameter. Omission will retrieve all languages by default.
       }
-    }
+    },
+    `gatsby-plugin-sass`
   ],
 }
