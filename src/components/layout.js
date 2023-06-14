@@ -13,7 +13,7 @@ import "./layout.css"
 import { storyblokInit, apiPlugin } from "gatsby-source-storyblok"
 
 storyblokInit({
-  accessToken: "0qXQGAIUwWGc9A36FbPqdQtt",
+  accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: {
     // components
