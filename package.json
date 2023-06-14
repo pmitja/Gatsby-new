@@ -15,8 +15,7 @@
     "gatsby-transformer-sharp": "^5.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "storyblok-js-client": "^5.10.6",
-    "storyblok-react": "^0.1.2"
+    "storyblok-js-client": "^5.10.6"
   },
   "devDependencies": {
     "prettier": "^2.8.8"
